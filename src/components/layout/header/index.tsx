@@ -2,6 +2,7 @@ import { Container } from '@components/container';
 import { Wrapper } from '@components/htmlTags/div';
 import { Image } from '@components/htmlTags/img';
 import { Logo } from '../logo';
+import { TextIntro } from '../textIntro';
 import { ImageBox, LogoBox } from './styles';
 
 export const Header = () => {
@@ -15,8 +16,9 @@ export const Header = () => {
           />
         </LogoBox>
         <ImageBox>
-          <Image src="banner.png" />
+          <Image src="banner.png" sx={{ zIndex: 1 }} />
         </ImageBox>
+        <TextIntro />
       </Container>
     </Wrapper>
   );

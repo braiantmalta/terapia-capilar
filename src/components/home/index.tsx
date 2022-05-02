@@ -2,9 +2,5 @@ import { Wrapper } from '@components/htmlTags/div';
 import { TextField } from '@mui/material';
 
 export const Home = () => {
-  return (
-    <Wrapper>
-      <TextField label="label" name="name" />
-    </Wrapper>
-  );
+  return <Wrapper></Wrapper>;
 };

@@ -8,7 +8,7 @@ export const LogoBox = styled('div')({
 
 export const ImageBox = styled('div')({
   display: 'flex',
-  position: 'relative',
+  position: 'absolute',
   top: 0,
   left: 0,
 });

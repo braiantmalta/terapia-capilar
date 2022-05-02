@@ -18,9 +18,18 @@ function MyApp({ Component, pageProps }: AppProps) {
           href="https://fonts.googleapis.com/icon?family=Material+Icons"
         />
         <link
+          rel="preconnect"
+          href="https://fonts.gstatic.com"
+          // crossOrigin
+        />
+        <link
+          href="https://fonts.googleapis.com/css2?family=Prata:300,400,500,700&display=swap"
+          rel="stylesheet"
+        />
+        {/* <link
           rel="stylesheet"
           href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap"
-        />
+        /> */}
         <meta
           name="viewport"
           content="width=device-width, initial-scale=1, user-scalable=0, maximum-scale=1, minimum-scale=1"
