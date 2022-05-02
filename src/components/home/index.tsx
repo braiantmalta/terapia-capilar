@@ -1,5 +1,5 @@
+import { Wrapper } from '@components/htmlTags/div';
 import { TextField } from '@mui/material';
-import { Wrapper } from './styles';
 
 export const Home = () => {
   return (
