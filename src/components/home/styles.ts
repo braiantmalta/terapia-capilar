@@ -13,12 +13,12 @@ export const AboutSessionBox = styled('div')(
       bottom: -8,
     },
     [theme.breakpoints.down('md')]: {
-      bottom: 130,
-      height: '350px',
+      bottom: 20,
+      height: '500px',
     },
     [theme.breakpoints.down('sm')]: {
-      bottom: 130,
-      height: '850px',
+      bottom: -146,
+      height: '1500px',
     },
   }),
 );

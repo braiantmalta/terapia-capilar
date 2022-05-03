@@ -11,7 +11,7 @@ export const TextBox = styled('div')(({ theme }) => ({
   width: '1000px',
   marginTop: '17px',
   [theme.breakpoints.down('md')]: {
-    width: '700px',
+    width: '500px',
   },
   [theme.breakpoints.down('sm')]: {
     width: '350px',
