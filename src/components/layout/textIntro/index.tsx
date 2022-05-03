@@ -1,17 +1,26 @@
 import { Wrapper } from '@components/htmlTags/div';
+// import { isTabletVersion } from '@components/isMobileVersion';
 import { Text } from '@components/text';
-import { Button } from '@mui/material';
+import { Button, useMediaQuery } from '@mui/material';
+import { theme } from '@styles/theme';
 import { ButtonBox, TextBox } from './styles';
 
 export const TextIntro = () => {
+  const isTabletVersion = useMediaQuery(
+    theme.breakpoints.down('md'),
+  );
+
   return (
     <Wrapper>
       <TextBox>
-        <Text type="h2" style={{ color: '#6A9B85' }}>
+        <Text
+          type={isTabletVersion ? 'h3' : 'h2'}
+          style={{ color: '#6A9B85' }}
+        >
           Formação
         </Text>
         <Text
-          type="h1"
+          type={isTabletVersion ? 'h2' : 'h1'}
           color="#ffffff"
           style={{
             margin: '17px 0px 18px',
@@ -22,7 +31,10 @@ export const TextIntro = () => {
             Capilar
           </strong>
         </Text>
-        <Text type="h5" color="#ffffff">
+        <Text
+          type={isTabletVersion ? 'h5' : 'h4'}
+          color="#ffffff"
+        >
           Conteúdo teórico, <br /> demonstração e prática.
         </Text>
         <ButtonBox>
@@ -33,11 +45,11 @@ export const TextIntro = () => {
             style={{
               borderRadius: '100px',
               backgroundColor: '#ffffff',
-              width: '250px',
-              height: '60px',
+              width: isTabletVersion ? '200px' : '250px',
+              height: isTabletVersion ? '40px' : '60px',
             }}
           >
-            <Text type="h5">
+            <Text type={isTabletVersion ? 'h6' : 'h5'}>
               <strong>SAIBA MAIS</strong>
             </Text>
           </Button>

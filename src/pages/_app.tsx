@@ -1,7 +1,9 @@
 import Head from 'next/head';
+import { AppProps } from 'next/app';
+import { ThemeProvider } from '@mui/system';
+import { theme } from '../styles/theme';
 import styles from '../styles/Home.module.css';
 import '../styles/globals.css';
-import { AppProps } from 'next/app';
 
 function MyApp({ Component, pageProps }: AppProps) {
   return (
@@ -23,9 +25,13 @@ function MyApp({ Component, pageProps }: AppProps) {
           // crossOrigin
         />
         <link
-          href="https://fonts.googleapis.com/css2?family=Prata:300,400,500,700&display=swap"
+          href="https://fonts.googleapis.com/css2?family=Merriweather:wght@300;400;500;700&family=Prata&display=swap"
           rel="stylesheet"
         />
+        {/* <link
+          href="https://fonts.googleapis.com/css2?family=Prata:300,400,500,700&display=swap"
+          rel="stylesheet"
+        /> */}
         {/* <link
           rel="stylesheet"
           href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap"
@@ -35,6 +41,7 @@ function MyApp({ Component, pageProps }: AppProps) {
           content="width=device-width, initial-scale=1, user-scalable=0, maximum-scale=1, minimum-scale=1"
         />
       </Head>
+      <ThemeProvider theme={theme} />
       <Component {...pageProps} />
     </div>
   );

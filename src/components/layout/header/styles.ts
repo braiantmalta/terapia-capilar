@@ -1,10 +1,13 @@
 import { styled } from '@mui/system';
 
-export const HeaderContent = styled('div')({
-  height: '950px',
+export const HeaderContent = styled('div')(({ theme }) => ({
+  height: '1020px',
   width: '100%',
   backgroundColor: '#6A9B85',
-});
+  [theme.breakpoints.down('lg')]: {
+    height: '720px',
+  },
+}));
 
 export const LogoBox = styled('div')({
   display: 'flex',
