@@ -30,9 +30,8 @@ export const GiftSessionBox = styled('div')(
       position: 'relative',
       top: '150px',
     },
-    [theme.breakpoints.down('md')]: {
-      position: 'relative',
-      top: '150px',
+    [theme.breakpoints.down('sm')]: {
+      top: '-250px',
     },
   }),
 );

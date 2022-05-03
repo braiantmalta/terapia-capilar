@@ -1,6 +1,7 @@
 import { Container } from '@components/container';
 import { Wrapper } from '@components/htmlTags/div';
 import { Image } from '@components/htmlTags/img';
+import { MainForm } from '@components/mainForm';
 import { useMediaQuery } from '@mui/material';
 import { theme } from '@styles/theme';
 import { Logo } from '../logo';
@@ -10,6 +11,7 @@ import {
   HeaderContent,
   LogoBox,
   TextIntroBox,
+  FooterContent,
 } from './styles';
 
 export const Header = () => {
@@ -39,9 +41,12 @@ export const Header = () => {
               }}
             />
           </ImageBox>
-          <TextIntroBox>
-            <TextIntro />
-          </TextIntroBox>
+          <FooterContent>
+            <TextIntroBox>
+              <TextIntro />
+            </TextIntroBox>
+            <MainForm />
+          </FooterContent>
         </Container>
       </HeaderContent>
     </Wrapper>

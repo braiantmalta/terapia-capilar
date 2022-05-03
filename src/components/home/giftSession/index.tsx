@@ -34,11 +34,11 @@ export const GiftSession = () => {
             />
           </ImageBox>
           <TextBox>
-            <Text type="h4">
+            <Text type={isTabletVersion ? 'h5' : 'h4'}>
               <strong>BRINDE</strong>
             </Text>
             <TextContentBox>
-              <Text type="h3">
+              <Text type={isTabletVersion ? 'h4' : 'h3'}>
                 <strong>
                   CÂMERA
                   <br />
@@ -53,12 +53,16 @@ export const GiftSession = () => {
           </TextBox>
         </GiftSessionBox>
         <FooterText>
-          <Text type="h3" color="#ffffff">
+          <Text
+            type={isTabletVersion ? 'h4' : 'h3'}
+            color="#ffffff"
+            textAlign="center"
+          >
             O FUTURO DOS SALÕES
           </Text>
           <TextContentBox>
             <Text
-              type="h5"
+              type={isTabletVersion ? 'h6' : 'h5'}
               color="#ffffff"
               textAlign="center"
             >

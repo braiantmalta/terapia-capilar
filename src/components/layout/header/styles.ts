@@ -13,11 +13,14 @@ export const HeaderContent = styled('div')(({ theme }) => ({
   // },
 }));
 
-export const LogoBox = styled('div')({
+export const LogoBox = styled('div')(({ theme }) => ({
   display: 'flex',
   justifyContent: 'flex-end',
   height: '150px',
-});
+  [theme.breakpoints.down('md')]: {
+    height: '80px',
+  },
+}));
 
 export const ImageBox = styled('div')({
   display: 'flex',
@@ -33,3 +36,9 @@ export const TextIntroBox = styled('div')(({ theme }) => ({
     marginTop: '30px',
   },
 }));
+
+export const FooterContent = styled('div')({
+  display: 'flex',
+  flexDirection: 'row',
+  justifyContent: 'space-between',
+});
