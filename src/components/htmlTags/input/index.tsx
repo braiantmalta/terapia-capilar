@@ -61,6 +61,7 @@ type StyledInputProps = {
         HTMLTextAreaElement | HTMLInputElement
       >
     | undefined;
+  className?: any;
 };
 
 export const StyledInput = ({
@@ -87,6 +88,7 @@ export const StyledInput = ({
   helperText,
   InputProps,
   children,
+  className,
 }: StyledInputProps) => {
   return (
     <TextField
@@ -113,6 +115,7 @@ export const StyledInput = ({
       onBlur={onBlur}
       helperText={helperText}
       InputProps={InputProps}
+      className={className}
     >
       {children}
     </TextField>

@@ -10,6 +10,7 @@ type StyledButtonProps = {
   children?: ReactNode;
   sx?: CSSProperties;
   height?: string;
+  type?: 'button' | 'reset' | 'submit' | undefined;
 };
 
 export const StyledButton = ({
@@ -19,6 +20,7 @@ export const StyledButton = ({
   children,
   sx,
   height,
+  type,
 }: StyledButtonProps) => {
   const isTabletVersion = useMediaQuery(
     theme.breakpoints.down('md'),
@@ -26,7 +28,7 @@ export const StyledButton = ({
 
   return (
     <Button
-      type="button"
+      type={type}
       variant="contained"
       size="large"
       style={{

@@ -1,4 +1,5 @@
 import { styled } from '@mui/system';
+import { StyledInput } from '@components/htmlTags';
 
 export const SubscribeBox = styled('div')({
   display: 'flex',
@@ -11,7 +12,6 @@ export const SubsribeContent = styled('div')({
   flexDirection: 'column',
   position: 'relative',
   bottom: '-474px',
-  // left: '50px',
 });
 
 export const InputBox = styled('div')({
@@ -19,10 +19,16 @@ export const InputBox = styled('div')({
   flexDirection: 'row',
 });
 
+export const TextFieldStyled = styled(StyledInput)({
+  fieldset: {
+    borderRadius: '50px',
+  },
+});
+
 export const TextBox = styled('div')({
   margin: '41px 0px 30px',
 });
 
 export const ButtonBox = styled('div')({
-  marginLeft: '-30px',
+  marginLeft: '-45px',
 });

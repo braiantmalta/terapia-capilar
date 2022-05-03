@@ -16,8 +16,6 @@ export const FooterContent = styled('div')({
   flexDirection: 'column',
   backgroundColor: '#111111',
   width: '100%',
-  borderTop: '50px solid black',
-  // borderRadius: '50% 100%',
   height: '400px',
 });
 

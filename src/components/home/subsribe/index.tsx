@@ -11,8 +11,10 @@ import {
   SubscribeBox,
   SubsribeContent,
   TextBox,
+  TextFieldStyled,
 } from './styles';
 import { Form, Formik } from 'formik';
+import { makeStyles } from '@mui/styles';
 
 type SubsribeInput = {
   email?: string;
@@ -20,7 +22,10 @@ type SubsribeInput = {
 
 export const Subscribe = () => {
   const schema = Yup.object().shape({
-    email: Yup.string().email().notRequired().nullable(),
+    email: Yup.string()
+      .email('tipo de email inválido')
+      .notRequired()
+      .nullable(),
   });
 
   const handleSubmit = (values: SubsribeInput) => {
@@ -56,7 +61,7 @@ export const Subscribe = () => {
             {({ errors, handleChange }) => (
               <Form>
                 <InputBox>
-                  <StyledInput
+                  <TextFieldStyled
                     name="email"
                     label="E-mail"
                     type="email"
@@ -64,11 +69,13 @@ export const Subscribe = () => {
                     helperText={errors.email}
                     style={{
                       backgroundColor: '#f4f4f4',
+                      borderRadius: '100px',
                       width: '600px',
                     }}
                   />
                   <ButtonBox>
                     <StyledButton
+                      type="submit"
                       backgroundColor="#6A9B85"
                       color="#ffffff"
                       title="INSCRIÇÃO"
