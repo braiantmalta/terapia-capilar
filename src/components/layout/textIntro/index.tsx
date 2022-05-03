@@ -1,3 +1,4 @@
+import { StyledButton } from '@components/htmlTags/button';
 import { Wrapper } from '@components/htmlTags/div';
 // import { isTabletVersion } from '@components/isMobileVersion';
 import { Text } from '@components/text';
@@ -38,21 +39,7 @@ export const TextIntro = () => {
           Conteúdo teórico, <br /> demonstração e prática.
         </Text>
         <ButtonBox>
-          <Button
-            type="button"
-            variant="contained"
-            size="large"
-            style={{
-              borderRadius: '100px',
-              backgroundColor: '#ffffff',
-              width: isTabletVersion ? '200px' : '250px',
-              height: isTabletVersion ? '40px' : '60px',
-            }}
-          >
-            <Text type={isTabletVersion ? 'h6' : 'h5'}>
-              <strong>SAIBA MAIS</strong>
-            </Text>
-          </Button>
+          <StyledButton title="SAIBA MAIS" />
         </ButtonBox>
       </TextBox>
     </Wrapper>
