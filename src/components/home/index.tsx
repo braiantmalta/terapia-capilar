@@ -3,6 +3,7 @@ import { Wrapper } from '@components/htmlTags/div';
 import { AboutSession } from './aboutSession';
 import { GiftSession } from './giftSession';
 import { GiftSessionBox, HomeContent } from './styles';
+import { Subscribe } from './subsribe';
 
 export const Home = () => {
   return (
@@ -12,11 +13,10 @@ export const Home = () => {
           <AboutSession />
         </Container>
         <GiftSessionBox>
-          {/* <Container> */}
           <GiftSession />
-          {/* </Container> */}
         </GiftSessionBox>
       </HomeContent>
+      <Subscribe />
     </Wrapper>
   );
 };

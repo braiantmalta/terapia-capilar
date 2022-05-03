@@ -17,7 +17,7 @@ export const GiftSession = () => {
       <Image
         src="wave_1.png"
         width={'100%'}
-        height={'70%'}
+        height={'50%'}
       />
       <Container>
         <GiftSessionBox>
