@@ -29,7 +29,25 @@ export const ImageBox = styled('div')({
   left: 0,
 });
 
+export const BannerImage = styled('img')(({ theme }) => ({
+  zIndex: 1,
+  width: '100%',
+  height: '100%',
+  objectFit: 'cover',
+  [theme.breakpoints.down('md')]: {
+    height: '800px',
+  },
+  [theme.breakpoints.down('sm')]: {
+    height: '600px',
+  },
+}));
+
 export const TextIntroBox = styled('div')(({ theme }) => ({
+  [theme.breakpoints.down('md')]: {
+    display: 'flex',
+    justifyContent: 'center',
+    marginTop: '72px',
+  },
   [theme.breakpoints.down('sm')]: {
     display: 'flex',
     justifyContent: 'center',
@@ -37,7 +55,7 @@ export const TextIntroBox = styled('div')(({ theme }) => ({
   },
 }));
 
-export const FooterContent = styled('div')({
+export const MainContent = styled('div')({
   display: 'flex',
   flexDirection: 'row',
   justifyContent: 'space-between',

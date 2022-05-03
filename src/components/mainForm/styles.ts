@@ -2,8 +2,8 @@ import { styled } from '@mui/system';
 
 export const FormBox = styled('div')({
   position: 'relative',
-  bottom: '550px',
-  left: '496px',
+  // bottom: '550px',
+  // left: '496px',
   zIndex: '4',
 });
 

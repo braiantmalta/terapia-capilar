@@ -11,7 +11,7 @@ import {
   HeaderContent,
   LogoBox,
   TextIntroBox,
-  FooterContent,
+  MainContent,
 } from './styles';
 
 export const Header = () => {
@@ -41,12 +41,13 @@ export const Header = () => {
               }}
             />
           </ImageBox>
-          <FooterContent>
+
+          <MainContent>
             <TextIntroBox>
               <TextIntro />
             </TextIntroBox>
             <MainForm />
-          </FooterContent>
+          </MainContent>
         </Container>
       </HeaderContent>
     </Wrapper>
