@@ -27,6 +27,7 @@ export const Header = () => {
               style={{ objectFit: 'contain', zIndex: 3 }}
             />
           </LogoBox>
+
           <ImageBox>
             <Image
               src="banner.png"

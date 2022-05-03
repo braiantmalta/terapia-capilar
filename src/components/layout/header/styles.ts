@@ -7,6 +7,7 @@ export const HeaderContent = styled('div')(({ theme }) => ({
   [theme.breakpoints.down('lg')]: {
     height: '720px',
   },
+  [theme.breakpoints.down('md')]: {},
 }));
 
 export const LogoBox = styled('div')({

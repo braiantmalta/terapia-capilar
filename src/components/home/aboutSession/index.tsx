@@ -1,6 +1,8 @@
 import { Container } from '@components/container';
 import { Wrapper } from '@components/htmlTags/div';
 import { Text } from '@components/text';
+import { useMediaQuery } from '@mui/material';
+import { theme } from '@styles/theme';
 import { Teachers } from '@utils/constants/teachers';
 import { TeacherCard } from '../teacherCard';
 import {
@@ -10,16 +12,23 @@ import {
 } from './styles';
 
 export const AboutSession = () => {
+  const isTabletVersion = useMediaQuery(
+    theme.breakpoints.down('md'),
+  );
+
   return (
     <Wrapper>
       <Container>
         <AboutSessionContent>
-          <Text type="h2" color="#ffffff">
+          <Text
+            type={isTabletVersion ? 'h5' : 'h2'}
+            color="#ffffff"
+          >
             <strong>SOBRE O CURSO</strong>
           </Text>
           <TextBox>
             <Text
-              type="h4"
+              type={isTabletVersion ? 'h6' : 'h4'}
               color="#ffffff"
               textAlign="center"
             >

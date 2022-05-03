@@ -15,6 +15,11 @@ export const GiftSessionBox = styled('div')(
     [theme.breakpoints.down('lg')]: {
       top: '-540px',
     },
+    [theme.breakpoints.down('sm')]: {
+      flexDirection: 'column',
+      top: '-150px',
+      gap: 0,
+    },
   }),
 );
 

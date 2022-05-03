@@ -3,6 +3,8 @@ import { StyledButton } from '@components/htmlTags/button';
 import { Wrapper } from '@components/htmlTags/div';
 import { Image } from '@components/htmlTags/img';
 import { Text } from '@components/text';
+import { useMediaQuery } from '@mui/material';
+import { theme } from '@styles/theme';
 import {
   FooterText,
   GiftSessionBox,
@@ -12,6 +14,10 @@ import {
 } from './styles';
 
 export const GiftSession = () => {
+  const isTabletVersion = useMediaQuery(
+    theme.breakpoints.down('md'),
+  );
+
   return (
     <Wrapper>
       <Image
@@ -22,7 +28,10 @@ export const GiftSession = () => {
       <Container>
         <GiftSessionBox>
           <ImageBox>
-            <Image src="shape.png" />
+            <Image
+              src="shape.png"
+              width={isTabletVersion ? '80%' : '100%'}
+            />
           </ImageBox>
           <TextBox>
             <Text type="h4">

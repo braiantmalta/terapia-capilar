@@ -14,6 +14,9 @@ export const TextBox = styled('div')({
   flexDirection: 'column',
 });
 
-export const TitleMargin = styled('div')({
+export const TitleMargin = styled('div')(({ theme }) => ({
   margin: '30px 0px 15px',
-});
+  [theme.breakpoints.down('sm')]: {
+    margin: '16px 0px 8px',
+  },
+}));
