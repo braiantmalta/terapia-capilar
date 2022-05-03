@@ -34,7 +34,6 @@ export const StyledButton = ({
       style={{
         borderRadius: '100px',
         backgroundColor: backgroundColor,
-
         width: isTabletVersion ? '200px' : '250px',
         height: height
           ? height

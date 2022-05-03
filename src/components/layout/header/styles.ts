@@ -21,3 +21,11 @@ export const ImageBox = styled('div')({
   top: 0,
   left: 0,
 });
+
+export const TextIntroBox = styled('div')(({ theme }) => ({
+  [theme.breakpoints.down('sm')]: {
+    display: 'flex',
+    justifyContent: 'center',
+    marginTop: '30px',
+  },
+}));

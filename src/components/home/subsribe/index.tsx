@@ -57,6 +57,7 @@ export const Subscribe = () => {
               handleSubmit(values);
             }}
             validationSchema={schema}
+            validateOnChange={false}
           >
             {({ errors, handleChange }) => (
               <Form>
@@ -80,6 +81,7 @@ export const Subscribe = () => {
                       color="#ffffff"
                       title="INSCRIÇÃO"
                       height="55px"
+                      sx={{ fontSize: '45px' }}
                     />
                   </ButtonBox>
                 </InputBox>

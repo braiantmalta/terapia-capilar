@@ -2,16 +2,21 @@ import { styled } from '@mui/system';
 
 export const ImageBox = styled('div')({});
 
-export const GiftSessionBox = styled('div')({
-  marginBottom: '280px',
-  display: 'flex',
-  flexDirection: 'row',
-  justifyContent: 'center',
-  alignItems: 'center',
-  gap: '160px',
-  position: 'relative',
-  top: '-685px',
-});
+export const GiftSessionBox = styled('div')(
+  ({ theme }) => ({
+    marginBottom: '280px',
+    display: 'flex',
+    flexDirection: 'row',
+    justifyContent: 'center',
+    alignItems: 'center',
+    gap: '160px',
+    position: 'relative',
+    top: '-685px',
+    [theme.breakpoints.down('lg')]: {
+      top: '-540px',
+    },
+  }),
+);
 
 export const TextBox = styled('div')({
   display: 'flex',
@@ -22,9 +27,12 @@ export const TextContentBox = styled('div')({
   margin: '33px 0px 40px',
 });
 
-export const FooterText = styled('div')({
+export const FooterText = styled('div')(({ theme }) => ({
   position: 'relative',
   top: '-430px',
   margin: 'auto',
   width: '600px',
-});
+  [theme.breakpoints.down('lg')]: {
+    top: '-650px',
+  },
+}));

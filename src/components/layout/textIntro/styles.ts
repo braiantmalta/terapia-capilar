@@ -8,6 +8,9 @@ export const TextBox = styled('div')(({ theme }) => ({
   [theme.breakpoints.down('md')]: {
     bottom: 55,
   },
+  [theme.breakpoints.down('sm')]: {
+    bottom: 75,
+  },
 }));
 
 export const ButtonBox = styled('div')(({ theme }) => ({

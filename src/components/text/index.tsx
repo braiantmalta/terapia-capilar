@@ -1,8 +1,6 @@
 import { CSSProperties, ReactNode } from 'react';
 import { Typography } from '@mui/material';
 import { SxProps } from '@mui/system';
-
-import { StyledTextColors } from '@utils/constants/textColors';
 import { theme } from '@styles/theme';
 
 type TextProps = {
@@ -30,7 +28,7 @@ type TextProps = {
     | 'left'
     | 'inherit'
     | 'justify';
-  color?: '#6A9B85' | '#ffffff';
+  color?: '#6A9B85' | '#ffffff' | any;
 };
 
 export const Text = ({

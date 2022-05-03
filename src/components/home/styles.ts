@@ -6,7 +6,8 @@ export const HomeContent = styled('div')({
   height: 'fit-content',
 });
 
+export const AboutSessionBox = styled('div')({});
+
 export const GiftSessionBox = styled('div')({
-  // backgroundColor: '#fff',
-  // padding: '120px 0px',
+  height: '700px',
 });

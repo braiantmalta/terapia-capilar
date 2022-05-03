@@ -6,13 +6,18 @@ export const SubscribeBox = styled('div')({
   justifyContent: 'center',
 });
 
-export const SubsribeContent = styled('div')({
-  display: 'flex',
-  alignItems: 'center',
-  flexDirection: 'column',
-  position: 'relative',
-  bottom: '-474px',
-});
+export const SubsribeContent = styled('div')(
+  ({ theme }) => ({
+    display: 'flex',
+    alignItems: 'center',
+    flexDirection: 'column',
+    position: 'relative',
+    bottom: '-474px',
+    [theme.breakpoints.down('lg')]: {
+      bottom: '-420px',
+    },
+  }),
+);
 
 export const InputBox = styled('div')({
   display: 'flex',
