@@ -1,7 +1,9 @@
+import { CSSProperties, ReactNode } from 'react';
 import { Typography } from '@mui/material';
 import { SxProps } from '@mui/system';
+
+import { StyledTextColors } from '@utils/constants/textColors';
 import { theme } from '@styles/theme';
-import { CSSProperties, ReactNode } from 'react';
 
 type TextProps = {
   children?: ReactNode;
@@ -28,6 +30,7 @@ type TextProps = {
     | 'left'
     | 'inherit'
     | 'justify';
+  color?: '#6A9B85' | '#ffffff';
 };
 
 export const Text = ({
@@ -37,12 +40,14 @@ export const Text = ({
   sx,
   secondary = false,
   textAlign,
+  color = '#6A9B85',
 }: TextProps) => (
   <Typography
     align={textAlign}
     variant={type}
     style={{
       ...style,
+      color: color,
     }}
     sx={sx}
     color={

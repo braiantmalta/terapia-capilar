@@ -12,8 +12,8 @@ export const TextIntro = () => {
         </Text>
         <Text
           type="h1"
+          color="#ffffff"
           style={{
-            color: '#ffffff',
             margin: '17px 0px 18px',
           }}
         >
@@ -22,7 +22,7 @@ export const TextIntro = () => {
             Capilar
           </strong>
         </Text>
-        <Text type="h5" style={{ color: '#ffffff' }}>
+        <Text type="h5" color="#ffffff">
           Conteúdo teórico, <br /> demonstração e prática.
         </Text>
         <ButtonBox>
@@ -33,7 +33,6 @@ export const TextIntro = () => {
             style={{
               borderRadius: '100px',
               backgroundColor: '#ffffff',
-              color: '#6A9B85',
               width: '250px',
               height: '60px',
             }}

@@ -1,6 +1,7 @@
 import { ReactNode } from 'react';
 import { Wrapper } from '@components/htmlTags/div';
 import { Header } from './header';
+import { Footer } from './footer';
 
 type LayoutProps = {
   children: ReactNode;
@@ -11,6 +12,7 @@ export const Layout = ({ children }: LayoutProps) => {
     <Wrapper>
       <Header />
       {children}
+      <Footer />
     </Wrapper>
   );
 };
