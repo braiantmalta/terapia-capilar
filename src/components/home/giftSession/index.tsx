@@ -14,11 +14,15 @@ import {
 export const GiftSession = () => {
   return (
     <Wrapper>
-      <Image src="wave_1.png" width={'100%'} />
+      <Image
+        src="wave_1.png"
+        width={'100%'}
+        height={'70%'}
+      />
       <Container>
         <GiftSessionBox>
           <ImageBox>
-            <Image src="shape.png" height={'70%'} />
+            <Image src="shape.png" />
           </ImageBox>
           <TextBox>
             <Text type="h4">
