@@ -1,4 +1,3 @@
-import { Container } from '@components/container';
 import { Wrapper } from '@components/htmlTags/div';
 import { AboutSession } from './aboutSession';
 import { GiftSession } from './giftSession';
@@ -7,7 +6,7 @@ import {
   GiftSessionBox,
   HomeContent,
 } from './styles';
-import { Subscribe } from './subsribe';
+import { NewsLetter } from './newsLetter';
 
 export const Home = () => {
   return (
@@ -21,7 +20,7 @@ export const Home = () => {
           <GiftSession />
         </GiftSessionBox>
       </HomeContent>
-      <Subscribe />
+      <NewsLetter />
     </Wrapper>
   );
 };

@@ -1,12 +1,12 @@
 import { styled } from '@mui/system';
 import { StyledInput } from '@components/htmlTags';
 
-export const SubscribeBox = styled('div')({
+export const NewsLetterBox = styled('div')({
   display: 'flex',
   justifyContent: 'center',
 });
 
-export const SubsribeContent = styled('div')(
+export const NewLetterContent = styled('div')(
   ({ theme }) => ({
     display: 'flex',
     alignItems: 'center',

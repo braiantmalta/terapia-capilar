@@ -13,6 +13,7 @@
     "@emotion/styled": "^11.8.1",
     "@mui/material": "^5.6.4",
     "@mui/styles": "^5.6.2",
+    "axios": "^0.27.2",
     "eslint-config-prettier": "8.5.0",
     "eslint-plugin-prettier": "4.0.0",
     "formik": "^2.2.9",
@@ -20,6 +21,7 @@
     "prettier": "2.6.2",
     "react": "18.1.0",
     "react-dom": "18.1.0",
+    "sweetalert2": "^11.4.10",
     "yup": "^0.32.11"
   },
   "devDependencies": {

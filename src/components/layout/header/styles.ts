@@ -1,13 +1,16 @@
 import { styled } from '@mui/system';
 
 export const HeaderContent = styled('div')(({ theme }) => ({
+  maxHeight: '1020px',
   height: '1020px',
   width: '100%',
   backgroundColor: '#6A9B85',
   [theme.breakpoints.down('lg')]: {
     height: '720px',
   },
-  [theme.breakpoints.down('md')]: {},
+  // [theme.breakpoints.down('md')]: {
+  //   heigth: '480px',
+  // },
 }));
 
 export const LogoBox = styled('div')({

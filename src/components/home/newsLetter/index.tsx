@@ -1,26 +1,29 @@
+import { Form, Formik } from 'formik';
+import { useState } from 'react';
 import * as Yup from 'yup';
-import {
-  StyledButton,
-  StyledInput,
-} from '@components/htmlTags';
+import Axios from 'axios';
+
+import { StyledButton } from '@components/htmlTags';
 import { Wrapper } from '@components/htmlTags/div';
 import { Text } from '@components/text';
 import {
   ButtonBox,
   InputBox,
-  SubscribeBox,
-  SubsribeContent,
+  NewsLetterBox,
+  NewLetterContent,
   TextBox,
   TextFieldStyled,
 } from './styles';
-import { Form, Formik } from 'formik';
-import { makeStyles } from '@mui/styles';
+import { Alert } from '@components/alert';
 
 type SubsribeInput = {
   email?: string;
 };
 
-export const Subscribe = () => {
+export const NewsLetter = () => {
+  const [email, setEmail] = useState<string>('');
+  const [loading, setLoading] = useState<boolean>(false);
+
   const schema = Yup.object().shape({
     email: Yup.string()
       .email('tipo de email inválido')
@@ -28,14 +31,31 @@ export const Subscribe = () => {
       .nullable(),
   });
 
-  const handleSubmit = (values: SubsribeInput) => {
+  const handleSubmit = async (values: SubsribeInput) => {
+    setLoading(true);
+    try {
+      const res = await Axios.post('/api/newsletter', {
+        email,
+      });
+      Alert({
+        icon: 'success',
+        title: 'Sucesso',
+        text: 'Email cadastrado com sucesso! Verifique sua caixa de entrada nos próximos minutos para começar a fazer a diferença!',
+      });
+    } catch (error) {
+      if (error instanceof Error) {
+        console.error(error);
+      }
+    } finally {
+      setLoading(false);
+    }
     console.log('values', values);
   };
 
   return (
     <Wrapper>
-      <SubscribeBox>
-        <SubsribeContent>
+      <NewsLetterBox>
+        <NewLetterContent>
           <Text type="h3">
             <strong>INSCREVA-SE</strong>
           </Text>
@@ -88,8 +108,8 @@ export const Subscribe = () => {
               </Form>
             )}
           </Formik>
-        </SubsribeContent>
-      </SubscribeBox>
+        </NewLetterContent>
+      </NewsLetterBox>
     </Wrapper>
   );
 };
