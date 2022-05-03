@@ -20,6 +20,7 @@ export const Home = () => {
           <GiftSession />
         </GiftSessionBox>
       </HomeContent>
+
       <NewsLetter />
     </Wrapper>
   );

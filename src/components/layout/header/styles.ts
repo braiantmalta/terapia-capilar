@@ -38,7 +38,7 @@ export const BannerImage = styled('img')(({ theme }) => ({
     height: '800px',
   },
   [theme.breakpoints.down('sm')]: {
-    height: '600px',
+    height: '1100px',
   },
 }));
 
@@ -51,12 +51,24 @@ export const TextIntroBox = styled('div')(({ theme }) => ({
   [theme.breakpoints.down('sm')]: {
     display: 'flex',
     justifyContent: 'center',
-    marginTop: '30px',
+    marginTop: '60px',
   },
 }));
 
-export const MainContent = styled('div')({
+export const MainFormBox = styled('div')(({ theme }) => ({
+  // display: 'flex',
+  // marginTop: '-30',
+  [theme.breakpoints.down('sm')]: {
+    margin: 'auto',
+    marginTop: '-25px',
+  },
+}));
+
+export const MainContent = styled('div')(({ theme }) => ({
   display: 'flex',
   flexDirection: 'row',
   justifyContent: 'space-between',
-});
+  [theme.breakpoints.down('sm')]: {
+    flexDirection: 'column',
+  },
+}));

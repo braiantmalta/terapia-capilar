@@ -12,6 +12,8 @@ import {
   LogoBox,
   TextIntroBox,
   MainContent,
+  BannerImage,
+  MainFormBox,
 } from './styles';
 
 export const Header = () => {
@@ -31,7 +33,8 @@ export const Header = () => {
           </LogoBox>
 
           <ImageBox>
-            <Image
+            <BannerImage src="banner.png" />
+            {/* <Image
               src="banner.png"
               sx={{
                 zIndex: 1,
@@ -39,14 +42,16 @@ export const Header = () => {
                 height: isTabletVersion ? '600px' : '100%',
                 objectFit: 'cover',
               }}
-            />
+            /> */}
           </ImageBox>
 
           <MainContent>
             <TextIntroBox>
               <TextIntro />
             </TextIntroBox>
-            <MainForm />
+            <MainFormBox>
+              <MainForm />
+            </MainFormBox>
           </MainContent>
         </Container>
       </HeaderContent>
