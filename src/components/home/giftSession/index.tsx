@@ -33,7 +33,7 @@ export const GiftSession = () => {
               />
             </ImageBox>
             <TextBox>
-              <Text type={isTabletVersion ? 'h5' : 'h4'}>
+              <Text type={isTabletVersion ? 'h5' : 'h3'}>
                 <strong>BRINDE</strong>
               </Text>
               <TextContentBox>

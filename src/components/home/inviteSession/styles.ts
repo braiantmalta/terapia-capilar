@@ -1,8 +1,10 @@
 import { styled } from '@mui/system';
 
-export const TextContentBox = styled('div')({
-  margin: '33px 0px 40px',
-});
+export const TextContentBox = styled('div')(
+  ({ theme }) => ({
+    margin: '33px 0px 40px',
+  }),
+);
 
 export const FooterText = styled('div')(({ theme }) => ({
   // padding: '250px 0px',
@@ -12,5 +14,8 @@ export const FooterText = styled('div')(({ theme }) => ({
   width: '600px',
   [theme.breakpoints.down('lg')]: {
     // top: '-650px',
+  },
+  [theme.breakpoints.down('sm')]: {
+    width: '300px',
   },
 }));

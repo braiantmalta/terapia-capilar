@@ -31,13 +31,17 @@ export const AvatarSessionBox = styled('div')(
       display: 'flex',
       justifyContent: 'center',
       gap: '0px',
-      top: '100px',
+      top: '-70px',
       // padding: '00px 0px 0px',
     },
     [theme.breakpoints.down('sm')]: {
       //shape img settings
+      display: 'flex',
+      justifyContent: 'center',
+      height: '300px',
+      top: '50px',
       flexDirection: 'column',
-      // top: '0px',
+      gap: '16px',
     },
   }),
 );
@@ -47,12 +51,15 @@ export const ImageBox = styled('div')({
   justifyContent: 'center',
 });
 
-export const TextBox = styled('div')({
+export const TextBox = styled('div')(({ theme }) => ({
   display: 'flex',
-  width: '300px',
+  width: 'fit-content',
   justifyContent: 'center',
   flexDirection: 'column',
-});
+  [theme.breakpoints.down('sm')]: {
+    alignItems: 'center',
+  },
+}));
 
 export const ImageStyled = styled('img')(({ theme }) => ({
   zIndex: 1,
@@ -69,7 +76,7 @@ export const ImageStyled = styled('img')(({ theme }) => ({
     // height: '800px',
   },
   [theme.breakpoints.down('sm')]: {
-    // height: '800px',
+    height: '650px',
   },
 }));
 
@@ -87,8 +94,9 @@ export const InviteSessionBox = styled('div')(
       // margin: '-70px 0px',
       height: '500px',
     },
-    // [theme.breakpoints.down('md')]: {
-
-    // },
+    [theme.breakpoints.down('sm')]: {
+      top: 350,
+      // height: '50px',
+    },
   }),
 );
