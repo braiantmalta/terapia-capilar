@@ -5,10 +5,13 @@ export const FooterWrapper = styled('div')({
   display: 'flex',
   flexDirection: 'column',
 });
-export const FooterImage = styled('div')({
+export const FooterImage = styled('div')(({ theme }) => ({
   display: 'flex',
   marginBottom: '-4px',
-});
+  [theme.breakpoints.down('sm')]: {
+    marginTop: '-1px',
+  },
+}));
 
 export const FooterContent = styled('div')({
   display: 'flex',
@@ -19,13 +22,19 @@ export const FooterContent = styled('div')({
   height: '400px',
 });
 
-export const TextBox = styled('div')({
+export const TextBox = styled('div')(({ theme }) => ({
   width: '400px',
-});
+  [theme.breakpoints.down('sm')]: {
+    width: '300px',
+  },
+}));
 
-export const ContentBox = styled('div')({
+export const ContentBox = styled('div')(({ theme }) => ({
   margin: '16px 0px',
-});
+  [theme.breakpoints.down('sm')]: {
+    width: '300px',
+  },
+}));
 
 export const IconsBox = styled('div')({
   display: 'flex',

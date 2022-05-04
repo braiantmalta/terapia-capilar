@@ -4,14 +4,13 @@ import { GiftSession } from './giftSession';
 import {
   AboutSessionBox,
   GiftSessionBox,
-  HomeContent,
+  NewsLetterBox,
 } from './styles';
 import { NewsLetter } from './newsLetter';
 
 export const Home = () => {
   return (
     <Wrapper style={{ backgroundColor: '#6A9B85' }}>
-      {/* <HomeContent> */}
       <AboutSessionBox>
         <AboutSession />
       </AboutSessionBox>
@@ -19,9 +18,10 @@ export const Home = () => {
       <GiftSessionBox>
         <GiftSession />
       </GiftSessionBox>
-      {/* </HomeContent> */}
 
-      <NewsLetter />
+      <NewsLetterBox>
+        <NewsLetter />
+      </NewsLetterBox>
     </Wrapper>
   );
 };

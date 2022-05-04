@@ -41,3 +41,8 @@ export const GiftSessionBox = styled('div')(
     },
   }),
 );
+
+export const NewsLetterBox = styled('div')({
+  height: 'fit-content',
+  backgroundColor: '#fff',
+});

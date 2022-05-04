@@ -15,6 +15,9 @@ import {
   TextFieldStyled,
 } from './styles';
 import { Alert } from '@components/alert';
+import { useMediaQuery } from '@mui/material';
+import { theme } from '@styles/theme';
+import { NewsLetterButton } from '@components/htmlTags/button/newsLetterButton';
 
 type SubsribeInput = {
   email?: string;
@@ -23,6 +26,10 @@ type SubsribeInput = {
 export const NewsLetter = () => {
   const [email, setEmail] = useState<string>('');
   const [loading, setLoading] = useState<boolean>(false);
+
+  const isTabletVersion = useMediaQuery(
+    theme.breakpoints.down('md'),
+  );
 
   const schema = Yup.object().shape({
     email: Yup.string()
@@ -56,11 +63,14 @@ export const NewsLetter = () => {
     <Wrapper>
       <NewsLetterBox>
         <NewLetterContent>
-          <Text type="h3">
+          <Text type={isTabletVersion ? 'h4' : 'h3'}>
             <strong>INSCREVA-SE</strong>
           </Text>
           <TextBox>
-            <Text type="h4" textAlign="center">
+            <Text
+              type={isTabletVersion ? 'h5' : 'h4'}
+              textAlign="center"
+            >
               Quantos dos seus clientes sofrem com algum
               tipo de proble-
               <br />
@@ -91,17 +101,22 @@ export const NewsLetter = () => {
                     style={{
                       backgroundColor: '#f4f4f4',
                       borderRadius: '100px',
-                      width: '600px',
+                      width: isTabletVersion
+                        ? '300px'
+                        : '600px',
                     }}
                   />
                   <ButtonBox>
-                    <StyledButton
+                    <NewsLetterButton
                       type="submit"
                       backgroundColor="#6A9B85"
                       color="#ffffff"
                       title="INSCRIÇÃO"
                       height="55px"
-                      sx={{ fontSize: '45px' }}
+                      sx={{
+                        fontSize: '45px',
+                        marginTop: '24px',
+                      }}
                     />
                   </ButtonBox>
                 </InputBox>
