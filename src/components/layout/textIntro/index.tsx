@@ -1,6 +1,6 @@
 import { useMediaQuery } from '@mui/material';
 
-import { StyledButton } from '@components/htmlTags/button';
+import { StyledButton } from '@components/button/styledButton';
 import { Wrapper } from '@components/htmlTags/div';
 import { Text } from '@components/text';
 import { theme } from '@styles/theme';

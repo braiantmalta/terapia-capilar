@@ -5,8 +5,10 @@ import {
   AboutSessionBox,
   GiftSessionBox,
   NewsLetterBox,
+  WhatsAppBox,
 } from './styles';
 import { NewsLetter } from './newsLetter';
+import { WhatsAppSession } from './whatsAppSession';
 
 export const Home = () => {
   return (
@@ -18,6 +20,10 @@ export const Home = () => {
       <GiftSessionBox>
         <GiftSession />
       </GiftSessionBox>
+
+      <WhatsAppBox>
+        <WhatsAppSession />
+      </WhatsAppBox>
 
       <NewsLetterBox>
         <NewsLetter />

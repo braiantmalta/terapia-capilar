@@ -1,5 +1,5 @@
 import { Container } from '@components/container';
-import { StyledButton } from '@components/htmlTags/button';
+import { StyledButton } from '@components/button/styledButton';
 import { Wrapper } from '@components/htmlTags/div';
 import { Image } from '@components/htmlTags/img';
 import { Text } from '@components/text';

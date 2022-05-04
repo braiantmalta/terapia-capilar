@@ -1,5 +1,5 @@
 import { StyledInput, Wrapper } from '@components/htmlTags';
-import { FormButton } from '@components/htmlTags/button/formButton';
+import { FormButton } from '@components/button/formButton';
 import { Text } from '@components/text';
 import { useMediaQuery } from '@mui/material';
 import { theme } from '@styles/theme';

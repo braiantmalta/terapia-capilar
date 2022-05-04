@@ -3,7 +3,6 @@ import { useState } from 'react';
 import * as Yup from 'yup';
 import Axios from 'axios';
 
-import { StyledButton } from '@components/htmlTags';
 import { Wrapper } from '@components/htmlTags/div';
 import { Text } from '@components/text';
 import {
@@ -17,7 +16,7 @@ import {
 import { Alert } from '@components/alert';
 import { useMediaQuery } from '@mui/material';
 import { theme } from '@styles/theme';
-import { NewsLetterButton } from '@components/htmlTags/button/newsLetterButton';
+import { NewsLetterButton } from '@components/button/newsLetterButton';
 
 type SubsribeInput = {
   email?: string;
@@ -29,6 +28,9 @@ export const NewsLetter = () => {
 
   const isTabletVersion = useMediaQuery(
     theme.breakpoints.down('md'),
+  );
+  const isMobileVersion = useMediaQuery(
+    theme.breakpoints.down('sm'),
   );
 
   const schema = Yup.object().shape({
@@ -96,6 +98,9 @@ export const NewsLetter = () => {
                     name="email"
                     label="E-mail"
                     type="email"
+                    margin={
+                      isMobileVersion ? 'normal' : 'none'
+                    }
                     onChange={handleChange}
                     helperText={errors.email}
                     style={{
@@ -115,7 +120,6 @@ export const NewsLetter = () => {
                       height="55px"
                       sx={{
                         fontSize: '45px',
-                        marginTop: '24px',
                       }}
                     />
                   </ButtonBox>

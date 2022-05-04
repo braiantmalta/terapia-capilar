@@ -88,7 +88,7 @@ export const InviteSessionBox = styled('div')(
   ({ theme }) => ({
     // margin: '80px 0px',
     position: 'relative',
-    top: 700,
+    top: 580,
     [theme.breakpoints.down('lg')]: {
       // margin: '180px 0px',
       // margin: '-70px 0px',

@@ -8,6 +8,7 @@ export const FooterWrapper = styled('div')({
 export const FooterImage = styled('div')(({ theme }) => ({
   display: 'flex',
   marginBottom: '-4px',
+
   [theme.breakpoints.down('sm')]: {
     marginTop: '-1px',
   },

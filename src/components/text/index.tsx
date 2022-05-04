@@ -28,7 +28,7 @@ type TextProps = {
     | 'left'
     | 'inherit'
     | 'justify';
-  color?: '#6A9B85' | '#ffffff' | any;
+  color?: '#6A9B85' | '#ffffff';
 };
 
 export const Text = ({
