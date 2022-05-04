@@ -1,11 +1,19 @@
 import { styled } from '@mui/system';
 
-export const AboutSessionContent = styled('div')({
-  display: 'flex',
-  height: 'content-fit',
-  flexDirection: 'column',
-  alignItems: 'center',
-});
+export const AboutSessionContent = styled('div')(
+  ({ theme }) => ({
+    display: 'flex',
+    // height: 'content-fit',
+    flexDirection: 'column',
+    alignItems: 'center',
+    [theme.breakpoints.down('md')]: {
+      padding: '0px',
+    },
+    [theme.breakpoints.down('sm')]: {
+      padding: '160px 0px 0px',
+    },
+  }),
+);
 
 export const TextBox = styled('div')(({ theme }) => ({
   width: '1000px',
