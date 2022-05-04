@@ -18,7 +18,7 @@ export const Footer = () => {
     <Wrapper>
       <FooterWrapper>
         <FooterImage>
-          <Image src="/wave_2.png" width={'100%'} />
+          <Image src="/wave_2.png" width={'80%'} />
         </FooterImage>
 
         <FooterContent>
